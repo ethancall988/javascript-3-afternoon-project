@@ -1,3 +1,4 @@
+
 /*
   Once you complete a problem, refresh ./nesting.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
@@ -52,7 +53,20 @@ var employees = [
 
 //Code Here
 
-
+function employeeUpdater(){
+  for(i = 0; i < employees.length; i++){
+    var obj = employees[i];
+    for(var prop in obj) {
+    if(obj[prop] === 'Theo'){
+      employees.splice(i,1)
+    }
+    if(obj[prop] === 'Lorie'){
+      obj['department'] = 'HR'
+      }
+    }
+  }
+  return employees
+}
 
 ////////// PROBLEM 2 //////////
 
